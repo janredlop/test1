@@ -2,6 +2,8 @@
 
 Este documento describe cómo cablear los botones de notas, los controles adicionales y la salida de audio de la placa ESP32 para el boceto `esp32_synth.ino`.
 
+![Esquema de conexiones propuesto](diagramas/esquema_conexiones.svg)
+
 ## Alimentación y referencias
 - **VIN / 5V**: Alimenta la placa ESP32 según el módulo utilizado (puede ser por USB o una fuente regulada externa).
 - **3V3**: Alimenta los componentes que requieran 3,3 V (por ejemplo, el lado de referencia de los pulsadores si se usan en configuración pull-up externa).
