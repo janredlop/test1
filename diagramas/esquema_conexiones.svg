@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <style>
+    .title { font: bold 32px 'Segoe UI', sans-serif; fill: #222; }
+    .label { font: 20px 'Segoe UI', sans-serif; fill: #222; }
+    .label-small { font: 18px 'Segoe UI', sans-serif; fill: #222; }
+    .label-white { font: 20px 'Segoe UI', sans-serif; fill: #fff; }
+    .box-esp32 { fill: #3a6ed0; stroke: #1d3f8a; stroke-width: 4; }
+    .box-button { fill: #8dd0ff; stroke: #1d3f8a; stroke-width: 3; }
+    .box-audio { fill: #f8b35b; stroke: #c97a1a; stroke-width: 3; }
+    .connection { stroke: #222; stroke-width: 4; fill: none; }
+    .connection-thin { stroke: #222; stroke-width: 3; fill: none; }
+    .gnd-line { stroke: #444; stroke-width: 4; stroke-dasharray: 12 12; fill: none; }
+  </style>
+  <text x="220" y="70" class="title">Esquema simplificado de conexiones del sintetizador ESP32</text>
+  <!-- ESP32 -->
+  <rect x="540" y="250" width="320" height="360" rx="18" class="box-esp32" />
+  <text x="700" y="300" text-anchor="middle" class="label-white">ESP32</text>
+  <text x="420" y="335" class="label-white">GPIO 32</text>
+  <text x="420" y="370" class="label-white">GPIO 33</text>
+  <text x="420" y="405" class="label-white">GPIO 27</text>
+  <text x="420" y="440" class="label-white">GPIO 14</text>
+  <text x="420" y="475" class="label-white">GPIO 12</text>
+  <text x="420" y="510" class="label-white">GPIO 13</text>
+  <text x="420" y="545" class="label-white">GPIO 15</text>
+  <text x="420" y="580" class="label-white">GPIO 4</text>
+  <text x="420" y="615" class="label-white">GND común</text>
+  <text x="880" y="615" class="label-white">+3.3 V</text>
+  <!-- Audio output -->
+  <rect x="560" y="80" width="280" height="120" rx="18" class="box-audio" />
+  <text x="700" y="140" text-anchor="middle" class="label">Amplificador + Altavoz</text>
+  <text x="700" y="170" text-anchor="middle" class="label-small">Salida DAC GPIO 25 (opcional GPIO 26)</text>
+  <line x1="700" y1="200" x2="700" y2="250" class="connection" />
+  <!-- Note buttons -->
+  <g>
+    <rect x="80" y="140" width="250" height="70" rx="18" class="box-button" />
+    <text x="205" y="185" text-anchor="middle" class="label">Botón nota Do4</text>
+    <line x1="330" y1="175" x2="540" y2="330" class="connection-thin" />
+  </g>
+  <g>
+    <rect x="80" y="230" width="250" height="70" rx="18" class="box-button" />
+    <text x="205" y="275" text-anchor="middle" class="label">Botón nota Re4</text>
+    <line x1="330" y1="265" x2="540" y2="365" class="connection-thin" />
+  </g>
+  <g>
+    <rect x="80" y="320" width="250" height="70" rx="18" class="box-button" />
+    <text x="205" y="365" text-anchor="middle" class="label">Botón nota Mi4</text>
+    <line x1="330" y1="355" x2="540" y2="400" class="connection-thin" />
+  </g>
+  <g>
+    <rect x="80" y="410" width="250" height="70" rx="18" class="box-button" />
+    <text x="205" y="455" text-anchor="middle" class="label">Botón nota Fa4</text>
+    <line x1="330" y1="445" x2="540" y2="435" class="connection-thin" />
+  </g>
+  <g>
+    <rect x="80" y="500" width="250" height="70" rx="18" class="box-button" />
+    <text x="205" y="545" text-anchor="middle" class="label">Botón nota Sol4</text>
+    <line x1="330" y1="535" x2="540" y2="470" class="connection-thin" />
+  </g>
+  <g>
+    <rect x="80" y="590" width="250" height="70" rx="18" class="box-button" />
+    <text x="205" y="635" text-anchor="middle" class="label">Botón nota La4</text>
+    <line x1="330" y1="625" x2="540" y2="505" class="connection-thin" />
+  </g>
+  <g>
+    <rect x="80" y="680" width="250" height="70" rx="18" class="box-button" />
+    <text x="205" y="725" text-anchor="middle" class="label">Botón nota Si4</text>
+    <line x1="330" y1="715" x2="540" y2="540" class="connection-thin" />
+  </g>
+  <g>
+    <rect x="80" y="770" width="250" height="70" rx="18" class="box-button" />
+    <text x="205" y="815" text-anchor="middle" class="label">Botón nota Do5</text>
+    <line x1="330" y1="805" x2="540" y2="575" class="connection-thin" />
+  </g>
+  <!-- Control buttons -->
+  <g>
+    <rect x="1020" y="320" width="260" height="120" rx="18" class="box-button" />
+    <text x="1150" y="370" text-anchor="middle" class="label">Botón selector</text>
+    <text x="1150" y="405" text-anchor="middle" class="label">de instrumentos</text>
+    <line x1="1020" y1="380" x2="860" y2="380" class="connection-thin" />
+    <text x="1170" y="455" class="label-small">GPIO 18</text>
+  </g>
+  <g>
+    <rect x="1020" y="480" width="260" height="120" rx="18" class="box-button" />
+    <text x="1150" y="530" text-anchor="middle" class="label">Botón selector</text>
+    <text x="1150" y="565" text-anchor="middle" class="label">de ritmos</text>
+    <line x1="1020" y1="540" x2="860" y2="430" class="connection-thin" />
+    <text x="1170" y="605" class="label-small">GPIO 19</text>
+  </g>
+  <!-- Shared ground and power rails -->
+  <path d="M540 620 H360 V860 H1190 V720" class="gnd-line" />
+  <text x="380" y="845" class="label">Barra de GND común para todos los pulsadores y módulos</text>
+  <path d="M860 620 H1240 V680" class="connection" stroke="#c43" stroke-width="4" fill="none" />
+  <text x="1245" y="685" class="label">Distribución +3.3 V a botones y módulos auxiliares</text>
+</svg>
